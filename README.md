@@ -55,6 +55,7 @@ Help to monitor mounts per device and node. Example bellow:
 
 #### Replication status
 Verify and test GPFS replication by creating file and verify replication flag.
+
 Path for test file, with permission to write, should be specified.
 
     [root@node1 ]# ./gpfs_replication.py replication -p /FS1/
@@ -71,8 +72,11 @@ Path for test file, with permission to write, should be specified.
 
 #### Searching in GPFS logs
 The script allow to search for a specified line in GPFS logs on all or particular node.
+
 The time period can be - **hour day week month**
+
 Gives critical status if found string in logs.
+
 Useful if you are looking for any event in logs.
 
     [root@node1 ]# ./gpfs_search_logs.py node -n node4 -t month -s gpfs_pagepool_small
@@ -80,6 +84,7 @@ Useful if you are looking for any event in logs.
 
 #### Node status
 Get status from **mmgetstate** for all or particular node.
+
 In **all** option its possibly to exclude nodes with **-e** parameter(in case node in maintenance).
 
     [root@node1 ]# ./gpfs_node.py all
