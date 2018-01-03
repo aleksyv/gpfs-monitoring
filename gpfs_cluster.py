@@ -46,7 +46,7 @@ def checkStatusAll(args):
     lines = output.split("\n")
     list = []
     for line in lines:
-        if ('Event' not in line) and ('mmhealth' in line) and ('THRESHOLD' not in line):
+        if ('Event' not in line) and ('mmhealth' in line):
             if args.exclude and (line.split(":")[6] not in args.exclude):
                 list.append(line.split(":"))
             elif not args.exclude:
@@ -86,7 +86,7 @@ def checkStatusNode(args):
     lines = output.split("\n")
     list = []
     for line in lines:
-        if ('Event' not in line) and ('mmhealth' in line)  and ('THRESHOLD' not in line):
+        if ('Event' not in line) and ('mmhealth' in line) :
             list.append(line.split(":"))
     list.remove(list[-1])
     list.remove(list[0])

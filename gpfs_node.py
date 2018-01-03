@@ -79,12 +79,12 @@ def executeBashCommand(command):
 
 
 def argumentParser():
-    parser = argparse.ArgumentParser(description='Check NSD node status')
+    parser = argparse.ArgumentParser(description='Check node status')
     group = parser.add_argument_group();
 
     subParser = parser.add_subparsers()
 
-    nodeParser = subParser.add_parser('device', help='Check GPFS node status')
+    nodeParser = subParser.add_parser('device', help='Check node status')
     nodeParser.set_defaults(func=checkStatus)
     nodeParser.add_argument('-d', '--device', dest='device', action='store', help='Device to get inode stats', required=True)
 
